@@ -18772,6 +18772,23 @@ package android.preference {
     method public void setShowSilent(boolean);
   }
 
+  public class SlimSeekBarPreference extends android.preference.Preference implements android.widget.SeekBar.OnSeekBarChangeListener {
+    ctor public SlimSeekBarPreference(android.content.Context, android.util.AttributeSet);
+    method public void disablePercentageValue(boolean);
+    method public void disableText(boolean);
+    method public void isMilliseconds(boolean);
+    method public void minimumValue(int);
+    method public void multiplyValue(int);
+    method public void onProgressChanged(android.widget.SeekBar, int, boolean);
+    method public void onStartTrackingTouch(android.widget.SeekBar);
+    method public void onStopTrackingTouch(android.widget.SeekBar);
+    method public void setDefault(int);
+    method public void setInitValue(int);
+    method public void setInterval(int);
+    field public int interval;
+    field public static int maximum;
+  }
+
   public class SwitchPreference extends android.preference.TwoStatePreference {
     ctor public SwitchPreference(android.content.Context, android.util.AttributeSet, int);
     ctor public SwitchPreference(android.content.Context, android.util.AttributeSet);
@@ -21257,6 +21274,7 @@ package android.provider {
     field public static final java.lang.String FONT_SCALE = "font_scale";
     field public static final java.lang.String HAPTIC_FEEDBACK_ENABLED = "haptic_feedback_enabled";
     field public static final deprecated java.lang.String HTTP_PROXY = "http_proxy";
+	field public static final java.lang.String INCALL_GLOWPAD_TRANSPARENCY = "incall_glowpad_transparency";
     field public static final deprecated java.lang.String INSTALL_NON_MARKET_APPS = "install_non_market_apps";
     field public static final deprecated java.lang.String LOCATION_PROVIDERS_ALLOWED = "location_providers_allowed";
     field public static final deprecated java.lang.String LOCK_PATTERN_ENABLED = "lock_pattern_autolock";
@@ -30676,6 +30694,7 @@ package android.widget {
     method public boolean isFlipping();
     method public void setAutoStart(boolean);
     method public void setFlipInterval(int);
+	method public void setSelfMaintained(boolean);
     method public void startFlipping();
     method public void stopFlipping();
   }
